@@ -4,25 +4,32 @@ var titulo = document.querySelector("#titulo-principal");
 
 titulo.textContent = "Aparecida Nutrição";
 
-var tabelaPacientes = document.querySelector("#tabela-pacientes");
-var pacienteUm = tabelaPacientes.querySelector("#paciente-um");
-var massa = pacienteUm.querySelector(".info-peso").textContent;
-var altura = pacienteUm.querySelector(".info-altura").textContent;
-var tdIMC = pacienteUm.querySelector(".info-imc");
+var pacientes = document.querySelectorAll(".paciente");
 var imc;
+var erro;
 
-if (massa <= 0 || massa >= 300)
+for(var i = 0, length1 = pacientes.length; i < length1; i++)
 {
-	imc = "Peso inválido";
-	
-	if (altura <= 0.4 || altura >= 4)
-	{	
-		imc += " | Altura inválida";
+	var peso = pacientes[i].querySelector(".info-peso").textContent;
+	var altura = pacientes[i].querySelector(".info-altura").textContent;
+	var tdIMC = pacientes[i].querySelector(".info-imc");
+
+	if (peso <= 0 || peso >= 300)
+	{
+		erro = "Peso inválido";
+		
+		if (altura <= 0.4 || altura >= 4)
+		{	
+			erro += " | Altura inválida";
+		}
+
+		tdIMC.textContent = erro;
+	} else
+	{
+		imc = peso / (altura * altura);
+		imc.toFixed(2)
+		tdIMC.textContent = imc.toFixed(2);	
 	}
-} else
-{
-	imc = massa / (altura * altura);
 }
 
-	tdIMC.textContent = imc;	
 
