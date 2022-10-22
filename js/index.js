@@ -9,8 +9,20 @@ var pacienteUm = tabelaPacientes.querySelector("#paciente-um");
 var massa = pacienteUm.querySelector(".info-peso").textContent;
 var altura = pacienteUm.querySelector(".info-altura").textContent;
 var tdIMC = pacienteUm.querySelector(".info-imc");
-var imc = massa / (altura * altura);
+var imc;
 
-tdIMC.textContent = imc;
+if (massa <= 0 || massa >= 300)
+{
+	imc = "Peso inválido";
+	
+	if (altura <= 0.4 || altura >= 4)
+	{	
+		imc += " | Altura inválida";
+	}
+} else
+{
+	imc = massa / (altura * altura);
+}
 
-console.log(imc);
+	tdIMC.textContent = imc;	
+
