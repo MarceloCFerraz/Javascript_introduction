@@ -61,14 +61,30 @@ table{
 
 td, th {
 	padding: .7em;
-	margin: 0;
+	margin: auto;
 	border: 1px solid #ccc;
 	text-align: center;
+	vertical-align: middle;
 }
 
 th{
 	font-weight: bold;
 	background-color: #EEE;
+}
+
+.btn-deletar{
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+
+	font-size: 0.7em;
+	color: rgb(180, 0, 0);
+	
+	background-color: transparent;
+	border-color: 1px rgb(180, 0, 0);
+	border: 2px solid;
+	border-radius: 1em;
 }
 
 label{
@@ -100,13 +116,12 @@ label{
 button{
 	padding: .5em 2em;
 	border: 0;
-	border-bottom: 3px solid;
 	font-size: 1.2em;
 	cursor: pointer;
 	margin: 0;
 	margin-top: -3px;
 	color: #fff;
-	background-color:#0c8cd3;
+	background-color: burlywood;
 	border-color: #04324c;
 	width: 20%;
     display: block;
