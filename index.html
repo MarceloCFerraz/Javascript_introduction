@@ -9,7 +9,6 @@
 
 	</head>
 	<body>
-
 		<header>
 			<div class="container">
 				<h1 id="titulo-principal">Aparecida Nutrição</h1>
@@ -18,6 +17,10 @@
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+		
+			<label for="filtrar-tabela" id="label-filtro">Pesquisar Paciente:</label>
+			<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+		
 				<table>
 					<thead>
 						<tr>
@@ -114,6 +117,7 @@
 
 		<script src="js/IMCController.js"></script>
 		<script src="js/PacienteController.js"></script>
+		<script src="js/FiltroController.js"></script>
 
 	</body>
 </html>

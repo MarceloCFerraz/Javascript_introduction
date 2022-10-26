@@ -6,6 +6,13 @@ adicionarIMCPacientes(pacientes);
 
 var btnAdicionarPaciente = document.querySelector("#adicionar-paciente");
 
+
+
+
+
+
+
+
 function adicionarIMCPacientes(pacientes)
 {
 	var imc = 0.00;

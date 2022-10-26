@@ -2,6 +2,15 @@ btnAdicionarPaciente.addEventListener("click", AdicionarNovoPaciente);
 
 ativarBotaoDelete(document.querySelector("#tabela-pacientes"));
 
+
+
+
+
+
+
+
+
+
 function ativarBotaoDelete (tabela) {
 	tabela.addEventListener("click", function(event)
 	{
@@ -9,7 +18,14 @@ function ativarBotaoDelete (tabela) {
 		if (alvo.classList == "btn-deletar")
 		{
 			// o botão de deletar foi clicado
-			alvo.closest(".paciente").remove();
+
+			var paciente = alvo.closest(".paciente");
+			paciente.classList.add(".fadeOut");
+			
+			setTimeout(function()
+			{
+				paciente.remove();
+			}, 500);
 		}
 	});
 }
