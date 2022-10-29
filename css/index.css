@@ -175,8 +175,4 @@ button[disabled=disabled], button:disabled {
 
 .oculto{
 	display: none;
-	visibility: hidden;
-	height: 0;
-  padding: 0;
-  overflow: hidden;
 }

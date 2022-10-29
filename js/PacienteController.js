@@ -52,7 +52,7 @@ function AdicionarNovoPaciente(event)
 	{
 		var novoPacienteTR = criarTrDePaciente(paciente); 
 
-		pacientesTable.appendChild(novoPacienteTR);
+		adicionarPacienteNaTabela(novoPacienteTR, pacientesTable);		
 
 		resetForm(form);
 	}
@@ -156,6 +156,10 @@ function criarTdDePaciente (dado, classe) {
 	td.classList.add(classe);
 
 	return td
+}
+
+function adicionarPacienteNaTabela (pacienteTR, pacientesTable) {
+	pacientesTable.appendChild(pacienteTR);
 }
 
 function resetForm(form)
